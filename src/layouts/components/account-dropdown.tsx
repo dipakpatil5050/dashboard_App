@@ -31,6 +31,8 @@ export default function AccountDropdown() {
 			replace("/login");
 		}
 	};
+
+	
 	const {
 		themeVars: { colors, borderRadius, shadows },
 	} = useTheme();

@@ -17,9 +17,7 @@ import { FontFamilyPreset } from "@/theme/tokens/typography";
 import { cn } from "@/utils";
 import { type ThemeColorPresets, ThemeLayout, ThemeMode } from "#/enum";
 
-/**
- * App Setting
- */
+
 export default function SettingButton() {
 	const [drawerOpen, setDrawerOpen] = useState(false);
 

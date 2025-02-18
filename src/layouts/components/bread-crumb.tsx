@@ -9,9 +9,6 @@ import { menuFilter } from "@/router/utils";
 
 type MenuItem = GetProp<BreadcrumbProps, "items">[number];
 
-/**
- * 动态面包屑解决方案：https://github.com/MinjieChang/myblog/issues/29
- */
 export default function BreadCrumb() {
 	const { t } = useTranslation();
 	const matches = useMatches();

@@ -8,7 +8,7 @@ export enum ResultEnum {
 	ERROR = -1,
 	TIMEOUT = 401,
 }
-
+	
 export enum StorageEnum {
 	UserInfo = "userInfo",
 	UserToken = "userToken",

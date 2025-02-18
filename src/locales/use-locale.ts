@@ -6,6 +6,7 @@ import type { Locale as AntdLocal } from "antd/es/locale";
 import { LocalEnum } from "#/enum";
 
 type Locale = keyof typeof LocalEnum;
+
 type Language = {
 	locale: keyof typeof LocalEnum;
 	icon: string;
