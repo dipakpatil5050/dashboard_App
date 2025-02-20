@@ -14,7 +14,6 @@ const { VITE_APP_HOMEPAGE: HOMEPAGE } = import.meta.env;
 type UserStore = {
 	userInfo: Partial<UserInfo>;
 	userToken: UserToken;
-	// 使用 actions 命名空间来存放所有的 action
 	actions: {
 		setUserInfo: (userInfo: UserInfo) => void;
 		setUserToken: (token: UserToken) => void;
@@ -40,8 +39,8 @@ const useUserStore = create<UserStore>()(
 			},
 		}),
 		{
-			name: "userStore", // name of the item in the storage (must be unique)
-			storage: createJSONStorage(() => localStorage), // (optional) by default, 'localStorage' is used
+			name: "userStore",
+			storage: createJSONStorage(() => localStorage),
 			partialize: (state) => ({
 				[StorageEnum.UserInfo]: state.userInfo,
 				[StorageEnum.UserToken]: state.userToken,
@@ -52,8 +51,9 @@ const useUserStore = create<UserStore>()(
 
 export const useUserInfo = () => useUserStore((state) => state.userInfo);
 export const useUserToken = () => useUserStore((state) => state.userToken);
-export const useUserPermission = () =>
-	useUserStore((state) => state.userInfo.permissions);
+
+export const useUserPermission = () => useUserStore((state) => state.userInfo.permissions);
+
 export const useUserActions = () => useUserStore((state) => state.actions);
 
 export const useSignIn = () => {

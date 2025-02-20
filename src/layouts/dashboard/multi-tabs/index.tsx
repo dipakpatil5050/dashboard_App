@@ -12,7 +12,6 @@ import type { KeepAliveTab } from "./types";
 
 export default function MultiTabs() {
 	const scrollContainer = useRef<HTMLUListElement>(null);
-
 	const { tabs, activeTabRoutePath, setTabs } = useMultiTabsContext();
 	const style = useMultiTabsStyle();
 	const { push } = useRouter();

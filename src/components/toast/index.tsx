@@ -6,9 +6,6 @@ import styled from "styled-components";
 
 import { Iconify } from "../icon";
 
-/**
- * https://sonner.emilkowal.ski/getting-started
- */
 export default function Toast() {
 	const { themeMode } = useSettings();
 

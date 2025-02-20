@@ -2,6 +2,8 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 // vercel analytics
 import { Analytics } from "@vercel/analytics/react";
+
+// import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 // react
 import { Suspense } from "react";
 import ReactDOM from "react-dom/client";
@@ -20,16 +22,6 @@ import "./theme/theme.css";
 // root component
 import App from "./App";
 import ProgressBar from "./components/progress-bar";
-
-const charAt = `
-    ███████╗██╗      █████╗ ███████╗██╗  ██╗ 
-    ██╔════╝██║     ██╔══██╗██╔════╝██║  ██║
-    ███████╗██║     ███████║███████╗███████║
-    ╚════██║██║     ██╔══██║╚════██║██╔══██║
-    ███████║███████╗██║  ██║███████║██║  ██║
-    ╚══════╝╚══════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
-  `;
-console.info(`%c${charAt}`, "color: #5BE49B");
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 

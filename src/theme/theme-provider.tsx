@@ -14,6 +14,7 @@ export function ThemeProvider({ children, adapters = [] }: ThemeProviderProps) {
 	const { themeMode, themeColorPresets, fontFamily, fontSize } = useSettings();
 
 	// Update HTML class to support Tailwind dark mode
+
 	useEffect(() => {
 		const root = window.document.documentElement;
 		root.classList.remove(ThemeMode.Light, ThemeMode.Dark);
@@ -21,6 +22,7 @@ export function ThemeProvider({ children, adapters = [] }: ThemeProviderProps) {
 	}, [themeMode]);
 
 	// Dynamically update theme color related CSS variables
+
 	useEffect(() => {
 		const root = window.document.documentElement;
 		const primaryColors = presetsColors[themeColorPresets];
@@ -35,12 +37,12 @@ export function ThemeProvider({ children, adapters = [] }: ThemeProviderProps) {
 	useEffect(() => {
 		const root = window.document.documentElement;
 		root.style.fontSize = `${fontSize}px`;
-
 		const body = window.document.body;
 		body.style.fontFamily = fontFamily;
 	}, [fontFamily, fontSize]);
 
 	// Wrap children with adapters
+
 	const wrappedWithAdapters = adapters.reduce(
 		(children, Adapter) => (
 			<Adapter key={Adapter.name} mode={themeMode}>

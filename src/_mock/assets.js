@@ -524,9 +524,6 @@ export const PERMISSION_LIST = [
 	...OTHERS_PERMISSION,
 ];
 
-/**
- * User role mock
- */
 const ADMIN_ROLE = {
 	id: "4281707933534332",
 	name: "Admin",
