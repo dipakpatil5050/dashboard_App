@@ -79,4 +79,5 @@ class APIClient {
 		});
 	}
 }
+
 export default new APIClient();
