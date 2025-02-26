@@ -26,7 +26,6 @@ export default function NavVertical(props: Props) {
 	const settings = useSettings();
 	const { themeLayout, themeMode, darkSidebar } = settings;
 	const { setSettings } = useSettingActions();
-
 	const routeToMenuFn = useRouteToMenuFn();
 	const permissionRoutes = usePermissionRoutes();
 	const flattenedRoutes = useFlattenedRoutes();
@@ -41,7 +40,6 @@ export default function NavVertical(props: Props) {
 	const selectedKeys = useMemo(() => [pathname], [pathname]);
 
 	const [openKeys, setOpenKeys] = useState<string[]>([]);
-	// 首次加载时设置 openKeys
 	useEffect(() => {
 		if (!collapsed) {
 			const keys = matches

@@ -1,10 +1,4 @@
-import {
-	type PropsWithChildren,
-	createContext,
-	useContext,
-	useMemo,
-	useState,
-} from "react";
+import { type PropsWithChildren, createContext, useContext, useMemo, useState } from "react";
 
 export enum LoginStateEnum {
 	LOGIN = 0,
@@ -19,6 +13,7 @@ interface LoginStateContextType {
 	setLoginState: (loginState: LoginStateEnum) => void;
 	backToLogin: () => void;
 }
+
 const LoginStateContext = createContext<LoginStateContextType>({
 	loginState: LoginStateEnum.LOGIN,
 	setLoginState: () => {},
@@ -38,14 +33,7 @@ export function LoginStateProvider({ children }: PropsWithChildren) {
 	}
 
 	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
-	const value: LoginStateContextType = useMemo(
-		() => ({ loginState, setLoginState, backToLogin }),
-		[loginState],
-	);
+	const value: LoginStateContextType = useMemo(() => ({ loginState, setLoginState, backToLogin }), [loginState]);
 
-	return (
-		<LoginStateContext.Provider value={value}>
-			{children}
-		</LoginStateContext.Provider>
-	);
+	return <LoginStateContext.Provider value={value}>{children}</LoginStateContext.Provider>;
 }

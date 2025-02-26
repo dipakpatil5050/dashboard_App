@@ -16,13 +16,13 @@ import ChartRadial from "./view/chart-radial";
 export default function ChartPage() {
 	return (
 		<>
-			<Typography.Link
+			{/* <Typography.Link
 				href="https://apexcharts.com"
 				style={{ color: themeVars.colors.palette.primary.default }}
 				className="mb-4 block"
 			>
 				https://apexcharts.com
-			</Typography.Link>
+			</Typography.Link> */}
 
 			<Row gutter={[16, 16]} justify="center">
 				<Col span={23} lg={12}>

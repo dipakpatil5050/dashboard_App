@@ -547,6 +547,7 @@ export const ROLE_LIST = [ADMIN_ROLE, TEST_ROLE];
 /**
  * User data mock
  */
+
 export const DEFAULT_USER = {
 	id: "b34719e1-ce46-457e-9575-99505ecee828",
 	username: "admin",

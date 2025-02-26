@@ -2,7 +2,6 @@ import { useCallback } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Iconify, SvgIcon } from "@/components/icon";
-
 import { useSettings } from "@/store/settingStore";
 import { cn } from "@/utils";
 import type { GetProp, MenuProps } from "antd";
@@ -35,7 +34,6 @@ export function useRouteToMenuFn() {
 				.map((item) => {
 					const { meta, children } = item;
 					if (!meta) return {} as MenuItem;
-
 					const menuItem: Partial<MenuItem> = {
 						key: meta.key,
 						disabled: meta.disabled,
@@ -43,9 +41,7 @@ export function useRouteToMenuFn() {
 							<div
 								className={cn(
 									"inline-flex items-center overflow-hidden",
-									themeLayout === ThemeLayout.Horizontal
-										? "justify-start"
-										: "justify-between",
+									themeLayout === ThemeLayout.Horizontal ? "justify-start" : "justify-between",
 								)}
 							>
 								<div className="">{t(meta.label)}</div>

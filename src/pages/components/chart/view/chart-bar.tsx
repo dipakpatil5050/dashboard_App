@@ -7,7 +7,7 @@ export default function ChartBar() {
 	const chartOptions = useChart({
 		stroke: { show: false },
 		plotOptions: {
-			bar: { horizontal: true, barHeight: "30%" },
+			bar: { horizontal: true, barHeight: "40%" },
 		},
 		xaxis: {
 			categories: [
@@ -25,12 +25,5 @@ export default function ChartBar() {
 		},
 	});
 
-	return (
-		<Chart
-			type="bar"
-			series={[{ data: series }]}
-			options={chartOptions}
-			height={320}
-		/>
-	);
+	return <Chart type="bar" series={[{ data: series }]} options={chartOptions} height={320} />;
 }

@@ -1,5 +1,17 @@
-import { Col, Row, Space } from "antd";
-
+import ChartPage from "@/pages/components/chart";
+import ChartArea from "@/pages/components/chart/view/chart-area";
+import ChartBar from "@/pages/components/chart/view/chart-bar";
+import ChartColumnStacked from "@/pages/components/chart/view/chart-column-Stacked";
+import ChartColumnMultiple from "@/pages/components/chart/view/chart-column-multiple";
+import ChartColumnNegative from "@/pages/components/chart/view/chart-column-negative";
+import ChartColumnSingle from "@/pages/components/chart/view/chart-column-single";
+import ChartDonut from "@/pages/components/chart/view/chart-donut";
+import ChartLine from "@/pages/components/chart/view/chart-line";
+import ChartMixed from "@/pages/components/chart/view/chart-mixed";
+import ChartPie from "@/pages/components/chart/view/chart-pie";
+import ChartRadar from "@/pages/components/chart/view/chart-radar";
+import ChartRadial from "@/pages/components/chart/view/chart-radial";
+import { Card, Col, Row, Space } from "antd";
 import AreaDownload from "./area-download";
 import BannerCard from "./banner-card";
 import { Applications, Conversion } from "./conversion_applications";
@@ -15,12 +27,12 @@ function Workbench() {
 		<div className="p-2">
 			<Row gutter={[16, 16]} justify="center">
 				<Col span={24} lg={16}>
-					<BannerCard />
+					{/* <BannerCard /> */}
 				</Col>
 				<Col span={24} lg={8}>
 					<Space direction="vertical" size="large" className="h-full w-full justify-center">
-						<Conversion />
-						<Applications />
+						{/* <Conversion /> */}
+						{/* <Applications /> */}
 					</Space>
 				</Col>
 			</Row>
@@ -68,20 +80,91 @@ function Workbench() {
 
 			<Row gutter={[16, 16]} className="mt-4" justify="center">
 				<Col span={24} md={12} lg={16}>
-					<NewInvoice />
+					{/* <NewInvoice /> */}
+					{/* <AreaDownload /> */}
+
+					{/* <Col span={24} md={12} lg={16}></Col> */}
 				</Col>
 				<Col span={24} md={12} lg={8}>
-					<TopRelated />
+					{/* <TopRelated /> */}
 				</Col>
 			</Row>
 
 			<Row gutter={[16, 16]} className="mt-4" justify="center">
 				<Col span={24} md={12}>
-					<TopInstalled />
+					{/* <TopInstalled /> */}
 				</Col>
 
 				<Col span={24} md={12}>
-					<TopAuthor />
+					{/* <TopAuthor /> */}
+				</Col>
+			</Row>
+			{/* <ChartPage /> */}
+			<Row gutter={[16, 16]} justify="center">
+				<Col span={23} lg={12}>
+					<Card title="Area">
+						<ChartArea />
+					</Card>
+				</Col>
+				<Col span={23} lg={12}>
+					<Card title="Line">
+						<ChartLine />
+					</Card>
+				</Col>
+
+				<Col span={23} lg={12}>
+					<Card title="Column Single">
+						<ChartColumnSingle />
+					</Card>
+				</Col>
+				<Col span={23} lg={12}>
+					<Card title="Column Multiple">
+						<ChartColumnMultiple />
+					</Card>
+				</Col>
+
+				<Col span={23} lg={12}>
+					<Card title="Column Stacked">
+						<ChartColumnStacked />
+					</Card>
+				</Col>
+				<Col span={23} lg={12}>
+					<Card title="Column Negative">
+						<ChartColumnNegative />
+					</Card>
+				</Col>
+
+				<Col span={23} lg={12}>
+					<Card title="Bar">
+						<ChartBar />
+					</Card>
+				</Col>
+				<Col span={23} lg={12}>
+					<Card title="Column Mixed">
+						<ChartMixed />
+					</Card>
+				</Col>
+
+				<Col span={24} lg={12}>
+					<Card title="Pie">
+						<ChartPie />
+					</Card>
+				</Col>
+				<Col span={23} lg={12}>
+					<Card title="Donut">
+						<ChartDonut />
+					</Card>
+				</Col>
+
+				<Col span={23} lg={12}>
+					<Card title="Radial Bar">
+						<ChartRadial />
+					</Card>
+				</Col>
+				<Col span={23} lg={12}>
+					<Card title="Radar">
+						<ChartRadar />
+					</Card>
 				</Col>
 			</Row>
 		</div>

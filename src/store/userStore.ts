@@ -59,7 +59,6 @@ export const useUserActions = () => useUserStore((state) => state.actions);
 export const useSignIn = () => {
 	const navigatge = useNavigate();
 	const { setUserToken, setUserInfo } = useUserActions();
-
 	const signInMutation = useMutation({
 		mutationFn: userService.signin,
 	});

@@ -6,7 +6,6 @@ import { Iconify } from "@/components/icon";
 import { CircleLoading } from "@/components/loading";
 import { useUserPermission } from "@/store/userStore";
 import { flattenTrees } from "@/utils/tree";
-
 import { Tag } from "antd";
 import type { Permission } from "#/entity";
 import { BasicStatus, PermissionType } from "#/enum";

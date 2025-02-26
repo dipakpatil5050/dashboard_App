@@ -133,9 +133,15 @@ export const darkColorTokens = {
 		secondary: "#919EAB",
 		disabled: "#637381",
 	},
+	// background: {
+	// 	default: "#161c24",
+	// 	paper: "#212b36",
+	// 	neutral: "#28323D",
+	// },
 	background: {
-		default: "#161c24",
-		paper: "#212b36",
-		neutral: "#28323D",
+		// new theme as per siemens colors
+		default: "#23233C",
+		paper: "#292934",
+		neutral: "#28333C",
 	},
 };
