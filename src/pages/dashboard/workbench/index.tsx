@@ -1,4 +1,3 @@
-import ChartPage from "@/pages/components/chart";
 import ChartArea from "@/pages/components/chart/view/chart-area";
 import ChartBar from "@/pages/components/chart/view/chart-bar";
 import ChartColumnStacked from "@/pages/components/chart/view/chart-column-Stacked";
@@ -12,31 +11,13 @@ import ChartPie from "@/pages/components/chart/view/chart-pie";
 import ChartRadar from "@/pages/components/chart/view/chart-radar";
 import ChartRadial from "@/pages/components/chart/view/chart-radial";
 import { Card, Col, Row, Space } from "antd";
+import PieDonutChart from "./PieDonutChart";
 import AreaDownload from "./area-download";
-import BannerCard from "./banner-card";
-import { Applications, Conversion } from "./conversion_applications";
-import CurrentDownload from "./current-download";
-import NewInvoice from "./new-invoice";
-import TopAuthor from "./top-authors";
-import TopInstalled from "./top-installed";
-import TopRelated from "./top-related";
 import TotalCard from "./total-card";
 
 function Workbench() {
 	return (
 		<div className="p-2">
-			<Row gutter={[16, 16]} justify="center">
-				<Col span={24} lg={16}>
-					{/* <BannerCard /> */}
-				</Col>
-				<Col span={24} lg={8}>
-					<Space direction="vertical" size="large" className="h-full w-full justify-center">
-						{/* <Conversion /> */}
-						{/* <Applications /> */}
-					</Space>
-				</Col>
-			</Row>
-
 			<Row gutter={[16, 16]} className="mt-4" justify="center">
 				<Col span={24} md={8}>
 					<TotalCard
@@ -71,35 +52,25 @@ function Workbench() {
 
 			<Row gutter={[16, 16]} className="mt-4" justify="center">
 				<Col span={24} md={12} lg={8}>
-					<CurrentDownload />
+					<PieDonutChart title="Operating System Installed" />
 				</Col>
 				<Col span={24} md={12} lg={16}>
 					<AreaDownload />
 				</Col>
 			</Row>
 
-			<Row gutter={[16, 16]} className="mt-4" justify="center">
-				<Col span={24} md={12} lg={16}>
-					{/* <NewInvoice /> */}
-					{/* <AreaDownload /> */}
-
-					{/* <Col span={24} md={12} lg={16}></Col> */}
+			<Row gutter={[16, 16]} className="mt-8" justify="center">
+				<Col span={24} lg={12} xl={16}>
+					<Card title="Website Visits">
+						<ChartMixed />
+					</Card>
 				</Col>
-				<Col span={24} md={12} lg={8}>
-					{/* <TopRelated /> */}
-				</Col>
-			</Row>
-
-			<Row gutter={[16, 16]} className="mt-4" justify="center">
-				<Col span={24} md={12}>
-					{/* <TopInstalled /> */}
-				</Col>
-
-				<Col span={24} md={12}>
-					{/* <TopAuthor /> */}
+				<Col span={24} lg={12} xl={8}>
+					<Card title="Current Visits">
+						<ChartPie />
+					</Card>
 				</Col>
 			</Row>
-			{/* <ChartPage /> */}
 			<Row gutter={[16, 16]} justify="center">
 				<Col span={23} lg={12}>
 					<Card title="Area">

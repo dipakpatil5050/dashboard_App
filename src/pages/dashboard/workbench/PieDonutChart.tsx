@@ -4,11 +4,11 @@ import Card from "@/components/card";
 import Chart from "@/components/chart/chart";
 import useChart from "@/components/chart/useChart";
 
-export default function CurrentDownload() {
+export default function PieDonutChart({ title = "Current Download" }) {
 	return (
 		<Card className="flex-col">
 			<header className="self-start">
-				<Typography.Title level={5}>Current Download</Typography.Title>
+				<Typography.Title level={5}>{title}</Typography.Title>
 			</header>
 			<main>
 				<ChartDonut />
@@ -19,8 +19,10 @@ export default function CurrentDownload() {
 
 const series = [44, 55, 13, 43];
 function ChartDonut() {
+	const labelSData = ["Mac", "Window", "IOS", "Android"];
+
 	const chartOptions = useChart({
-		labels: ["Mac", "Window", "IOS", "Android"],
+		labels: labelSData,
 		stroke: {
 			show: false,
 		},
@@ -52,5 +54,5 @@ function ChartDonut() {
 		},
 	});
 
-	return <Chart type="donut" series={series} options={chartOptions} height={360} />;
+	return <Chart type="donut" series={series} options={chartOptions} height={317} />;
 }
