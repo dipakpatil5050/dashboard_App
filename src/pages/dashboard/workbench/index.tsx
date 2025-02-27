@@ -10,7 +10,8 @@ import ChartMixed from "@/pages/components/chart/view/chart-mixed";
 import ChartPie from "@/pages/components/chart/view/chart-pie";
 import ChartRadar from "@/pages/components/chart/view/chart-radar";
 import ChartRadial from "@/pages/components/chart/view/chart-radial";
-import { Card, Col, Row, Space } from "antd";
+
+import { Card, Col, Row } from "antd";
 import PieDonutChart from "./PieDonutChart";
 import AreaDownload from "./area-download";
 import TotalCard from "./total-card";
@@ -54,6 +55,7 @@ function Workbench() {
 				<Col span={24} md={12} lg={8}>
 					<PieDonutChart title="Operating System Installed" />
 				</Col>
+
 				<Col span={24} md={12} lg={16}>
 					<AreaDownload />
 				</Col>
@@ -65,13 +67,15 @@ function Workbench() {
 						<ChartMixed />
 					</Card>
 				</Col>
+
 				<Col span={24} lg={12} xl={8}>
 					<Card title="Current Visits">
 						<ChartPie />
 					</Card>
 				</Col>
 			</Row>
-			<Row gutter={[16, 16]} justify="center">
+
+			<Row gutter={[16, 16]} className="mt-5" justify="center">
 				<Col span={23} lg={12}>
 					<Card title="Area">
 						<ChartArea />

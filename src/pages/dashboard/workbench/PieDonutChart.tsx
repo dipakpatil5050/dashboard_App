@@ -4,7 +4,7 @@ import Card from "@/components/card";
 import Chart from "@/components/chart/chart";
 import useChart from "@/components/chart/useChart";
 
-export default function PieDonutChart({ title = "Current Download" }) {
+export default function PieDonutChart({ title = "Data" }) {
 	return (
 		<Card className="flex-col">
 			<header className="self-start">
@@ -19,10 +19,10 @@ export default function PieDonutChart({ title = "Current Download" }) {
 
 const series = [44, 55, 13, 43];
 function ChartDonut() {
-	const labelSData = ["Mac", "Window", "IOS", "Android"];
+	const labelData = ["Mac", "Window", "IOS", "Android"];
 
 	const chartOptions = useChart({
-		labels: labelSData,
+		labels: labelData,
 		stroke: {
 			show: false,
 		},
